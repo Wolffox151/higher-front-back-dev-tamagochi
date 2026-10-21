@@ -155,17 +155,17 @@ class SimpleGame(AbstractGame):
     def food(self) -> list[Food]:
         """Вернуть список купленной еды.
 
-        :return: копия списка еды в сумке
+        :return: копия списка еды в инвентаре
         """
-        return list(self._food)
+        return self._food
 
     @property
     def medicine(self) -> list[Medicine]:
         """Вернуть список купленных лекарств
 
-        :return: копия списка лекарств в сумке
+        :return: копия списка лекарств в инвентаре
         """
-        return list(self._medicine)
+        return self._medicine
 
     def get_status(self) -> dict[str, int]:
         """Получить показатели питомца и баланс игры
